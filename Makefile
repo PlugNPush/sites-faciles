@@ -77,7 +77,7 @@ demo:
 
 .PHONY: runserver
 runserver:
-	$(EXEC_CMD) poetry run python manage.py runserver $(HOST_URL):$(HOST_PORT)
+	$(EXEC_CMD) poetry run python manage.py runserver 7777:7777
 
 
 .PHONY: test

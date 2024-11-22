@@ -266,7 +266,7 @@ WAGTAIL_SITE_NAME = os.getenv("SITE_NAME", "Sites faciles")
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 WAGTAILADMIN_BASE_URL = f"{os.getenv('HOST_PROTO', 'https')}://{HOST_URL}"
 
-HOST_PORT = os.getenv("HOST_PORT", "")
+HOST_PORT = "7777"
 if HOST_PORT != "":
     WAGTAILADMIN_BASE_URL = f"{WAGTAILADMIN_BASE_URL}:{HOST_PORT}"
 WAGTAILAPI_BASE_URL = WAGTAILADMIN_BASE_URL

@@ -1,6 +1,6 @@
 FROM python:3.10
 
-EXPOSE ${HOST_PORT}
+EXPOSE 7777
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -40,4 +40,4 @@ USER app
 ENTRYPOINT ["./entrypoint.sh"]
 
 # https://stackoverflow.com/a/40454758/21676629
-CMD ["sh", "-c", "poetry run python manage.py runserver 0.0.0.0:$HOST_PORT"]
+CMD ["sh", "-c", "poetry run python manage.py runserver 0.0.0.0:7777"]
